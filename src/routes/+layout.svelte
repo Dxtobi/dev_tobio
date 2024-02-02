@@ -5,6 +5,7 @@
   import { onMount } from 'svelte';
 	import Header from './Header.svelte';
 	import './styles.css';
+	import './animations.css';
 	import 'iconify-icon';
 	onMount(()=>{
 		startMouseEffect();
@@ -17,7 +18,7 @@
 <div class="app overflow-hidden">
 	<Header />
 
-	<main >
+	<main id="main" >
 		<slot />
 	</main>
 

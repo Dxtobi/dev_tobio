@@ -1,6 +1,6 @@
 <script>
   import AboutMe from './AboutMe.svelte';
-
+  import SectionTitle from "./SectionTitle.svelte";
   // import GridBackground from "../GridBackground.svelte";
   let about_, project_, blog_
 
@@ -8,9 +8,9 @@
     { pro:'backend', num:8, context:'This includes personal projects on production'},
    { pro:'frontend', num:20, context:'Dose not includes clients projects'},
    { pro:'on production', num:5, context:'This are personal projects on production'},
-   { pro:'graphic designs', num:50, context:'This includes personal designs'},
+   { pro:'graphic designs', num:50, context:'This includes personal designs'}
   
-  ]
+  ];
 </script>
 
 
@@ -68,14 +68,12 @@
 }
 </style>
 <section class="min-h-screen p-8 md:p-20 flex  flex-col items-center relative w-screen">
-    <!-- <GridBackground/> -->
+    
     <div class="alternative_bg_box-1"></div>
     <div class="bg-2-trans-1"></div>
-    <!-- <div style="background-image: url(/SVG/Asset4.svg);" class="img-bg ">
-
-    </div> -->
+   
     <div class="my-5 text-start w-full">
-      <p class="text-red-600 righteous-regular text-[5rem]   ">P <span bind:this={project_} id="project_" class="text-[#4c4c4c]"> R O</span> J E C <span id="sit-2">T</span> S</p>
+      <p class="text-red-600 righteous-regular text-[4rem] md:text-[5rem]" id="sit2"><SectionTitle texts='PR*JECTS.' /></p>
     </div>
   <div class="w-screen  project-body overflow-visible relative">
     <!-- <div class="indicator">
@@ -114,8 +112,20 @@
 
   <section class="min-h-screen  flex justify-start  items-center w-full p-8 md:p-20">
     <div class="w-full">
-      <div class="my-5 text-start text-[5rem] w-full">
-          <p class="text-red-600 righteous-regular   ">BL<span bind:this={blog_} class="text-[#4c4c4c]" id="sit-4">O</span>GS</p>
+      <div class="my-5 text-start text-[4rem] w-full">
+          <p class="text-red-600 righteous-regular   " id="sit4"><SectionTitle texts='BL?G.' /></p>
+        </div>
+      <div>
+
+      </div>
+       
+    </div>
+  </section>
+
+  <section class="min-h-screen  flex justify-start  items-center w-full p-8 md:p-20">
+    <div class="w-full">
+      <div class="my-5 text-start text-[4rem] w-full">
+          <p class="text-red-600 righteous-regular   " id="sit4"><SectionTitle texts='C*NTACT.' /></p>
         </div>
       <div>
 

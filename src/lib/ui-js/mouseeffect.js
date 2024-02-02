@@ -55,7 +55,8 @@ export const animate_mouse = () => {
         //    console.log(elem.x)
         elem.style.left = x - 20 + "px";
         elem.style.top = y - 20 + "px";
-        elem.style.scale = (mouse.length - i) / mouse.length
+        elem.style.transform = `scale(${(mouse.length - i) / mouse.length})`
+       // console.log((mouse.length - i) / mouse.length);
         elem.x = x;
         elem.y = y;
         const next_circle = mouse[i + 1] || mouse[0]
