@@ -1,28 +1,31 @@
 // src/routes/api/visits/+server.js
 import { json } from '@sveltejs/kit';
-import fs from 'fs/promises';
-import path from 'path';
-
-const filePath = path.join(process.cwd(), 'visits.json');
+import { kv } from '@vercel/kv';
+const VISIT_COUNT_KEY = 'visit_count';
 
 export async function GET() {
     try {
-        const data = await fs.readFile(filePath, 'utf8');
-        const jsonData = JSON.parse(data);
-        return json(jsonData);
+        let visitCount = await kv.get(VISIT_COUNT_KEY);
+        if (visitCount === null) {
+            visitCount = 400;
+            await kv.set(VISIT_COUNT_KEY, visitCount);
+        }
+        return json({ visit_count: visitCount });
     } catch (error) {
-        console.error('Error reading the JSON file:', error);
+        console.error('Error reading the visit count from KV storage:', error);
         return new Response('Internal Server Error', { status: 500 });
     }
 }
 
 export async function POST() {
-    try {
-        const data = await fs.readFile(filePath, 'utf8');
-        const jsonData = JSON.parse(data);
-        jsonData.visit_count += 1;
-        await fs.writeFile(filePath, JSON.stringify(jsonData, null, 4));
-        return json(jsonData);
+    try { let visitCount = await kv.get(VISIT_COUNT_KEY);
+        if (visitCount === null) {
+            visitCount = 0;
+        }
+        visitCount += 1;
+        await kv.set(VISIT_COUNT_KEY, visitCount);
+        return json({visit_count:visitCount})
+       // return json(jsonData);
     } catch (error) {
         console.error('Error updating the JSON file:', error);
         return new Response('Internal Server Error', { status: 500 });

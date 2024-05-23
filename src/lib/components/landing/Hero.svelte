@@ -1,9 +1,7 @@
 <script>
   import { slide } from "svelte/transition";
   import FloatLogos from "./FloatLogos.svelte";
-  import Loader_1 from "./Loader_1.svelte";
   import SectionTitle from "./SectionTitle.svelte";
-  import { startMouseEffect } from "./../../ui-js/mouseeffect.js";
   import Testcomp from "./Testcomp.svelte";
   import { onMount } from "svelte";
 
