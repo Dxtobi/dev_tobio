@@ -5,6 +5,7 @@
   import SectionTitle from "./SectionTitle.svelte";
   import { startMouseEffect } from "./../../ui-js/mouseeffect.js";
   import Testcomp from "./Testcomp.svelte";
+  import { onMount } from "svelte";
 
   function downloadFile() {
     const link = document.createElement("a");
@@ -12,6 +13,22 @@
     link.download = "jao.pdf"; // Set the downloaded file name
     link.click();
   }
+
+  let visitCount = "000";
+
+  onMount(async () => {
+    try {
+      // Update the visit count
+      await fetch("/api/visits", { method: "POST" });
+
+      // Fetch the updated visit count
+      const updatedResponse = await fetch("/api/visits");
+      const updatedData = await updatedResponse.json();
+      visitCount = updatedData.visit_count;
+    } catch (error) {
+      console.error("Error fetching or updating visit count:", error);
+    }
+  });
 </script>
 
 <!-- <div
@@ -104,7 +121,7 @@
 
   <div class="play-regular absolute font-semibold top-[86px] left-[150px]">
     <span class="">VISITS:</span>
-    <span class="text-red-600">290</span>
+    <span class="text-red-600">{visitCount}</span>
   </div>
 
   <div
