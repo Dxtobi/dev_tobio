@@ -10,7 +10,7 @@
   class="min-h-screen relative"
   style="background: linear-gradient(349deg, #33333347, #888888);"
 >
-  <div class="absolute z-[-1] top-[200px] right-0 md:right-[10px]">
+  <!-- <div class="absolute z-[-1] top-[200px] right-0 md:right-[10px]">
     <FloatLogos speed="50s" />
   </div>
   <div class="absolute z-[-1] top-[100px] right-0 md:right-[10px]">
@@ -18,7 +18,7 @@
   </div>
   <div class="absolute z-[-1] top-[150px] right-0 md:right-[10px]">
     <FloatLogos from="left" />
-  </div>
+  </div> -->
   <div>
     <h2
       class="text-[5rem] absolute font-bold top-20 left-4 text-white flex flex-col"

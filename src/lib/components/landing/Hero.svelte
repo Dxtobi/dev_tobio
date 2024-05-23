@@ -1,9 +1,17 @@
 <script>
-  import FloatLogos from './FloatLogos.svelte';
-  import Loader_1 from './Loader_1.svelte';
-  import SectionTitle from './SectionTitle.svelte';
-  import { startMouseEffect } from './../../ui-js/mouseeffect.js';
-  import Testcomp from './Testcomp.svelte';
+  import { slide } from "svelte/transition";
+  import FloatLogos from "./FloatLogos.svelte";
+  import Loader_1 from "./Loader_1.svelte";
+  import SectionTitle from "./SectionTitle.svelte";
+  import { startMouseEffect } from "./../../ui-js/mouseeffect.js";
+  import Testcomp from "./Testcomp.svelte";
+
+  function downloadFile() {
+    const link = document.createElement("a");
+    link.href = "/jao.pdf"; // Path to the PDF file relative to the root of the project
+    link.download = "jao.pdf"; // Set the downloaded file name
+    link.click();
+  }
 </script>
 
 <!-- <div
@@ -40,19 +48,36 @@
   </div>
 </div> -->
 
-<section class=" flex justify-center items-center w-full min-h-screen relative" id="hero">
+<section
+  class=" flex justify-center items-center w-full min-h-screen relative"
+  id="hero"
+>
+  <button
+    class="rounded-full shadow-2xl py-1 px-10 text-white bg-gradient-to-r from-red-500 to-red-300 w-fit mt-2 absolute left-10 bottom-10"
+    on:click={downloadFile}
+    transition:slide={{ duration: 880, axis: "y" }}>Get My CV</button
+  >
   <div class="alternative_bg_box"></div>
   <div class="bg-2-trans"></div>
   <!-- <GridBackground/> -->
   <div class="relative overflow-visible flex justify-center items-center">
     <div class="overflow-visible">
-      <div class="text-[9rem] md:text-[15rem] text-shadow_ items-center overflow-visible">
-        <div style="line-height: 1;" class="pacifico-regular text-red-600 text-[5rem]" id="sit1">
+      <div
+        class="text-[9rem] md:text-[15rem] text-shadow_ items-center overflow-visible"
+      >
+        <div
+          style="line-height: 1;"
+          class="pacifico-regular text-red-600 text-[5rem]"
+          id="sit1"
+        >
           <SectionTitle texts="DEV-." />
         </div>
         <Testcomp />
         <div class="relative overflow-visible">
-          <div style="line-height: 1;" class="righteous-regular flex text-white overflow-visible">
+          <div
+            style="line-height: 1;"
+            class="righteous-regular flex text-white overflow-visible"
+          >
             <div class="tobi_place">T</div>
             <div class="tobi_place">O</div>
             <div class="tobi_place" id="sit1">B</div>
@@ -107,7 +132,7 @@
 
   #carousel-fog::after {
     z-index: 30;
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     background: linear-gradient(89deg, white, #ffffffe8, transparent);
