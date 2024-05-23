@@ -1,8 +1,9 @@
 <script>
-	import FloatLogos from './FloatLogos.svelte';
-  import Loader_1 from "./Loader_1.svelte";
-  import SectionTitle from "./SectionTitle.svelte";
-  import { startMouseEffect } from "./../../ui-js/mouseeffect.js";
+  import FloatLogos from './FloatLogos.svelte';
+  import Loader_1 from './Loader_1.svelte';
+  import SectionTitle from './SectionTitle.svelte';
+  import { startMouseEffect } from './../../ui-js/mouseeffect.js';
+  import Testcomp from './Testcomp.svelte';
 </script>
 
 <!-- <div
@@ -39,32 +40,41 @@
   </div>
 </div> -->
 
-<div class="diarection-container-btn fixed right-10 z-30 bottom-10 text-xl">
-  <button class="diarection-button"> &uarr;</button>
-  <button class="diarection-button"> &darr;</button>
-</div>
-<section
-  class=" flex justify-center items-center w-full min-h-screen relative"
-  id="hero_"
->
+<section class=" flex justify-center items-center w-full min-h-screen relative" id="hero">
   <div class="alternative_bg_box"></div>
   <div class="bg-2-trans"></div>
   <!-- <GridBackground/> -->
   <div class="relative overflow-visible flex justify-center items-center">
-   <div class="overflow-visible">
-    <div class="text-[9rem] md:text-[15rem] text-shadow_  items-center">
-    <div style="line-height: 1;" class="pacifico-regular text-red-600 text-[5rem]" id="sit1"><SectionTitle texts='DEV-.' /></div>
-    <div class="relative overflow-visible">
-      <div style="line-height: 1;" class="righteous-regular flex text-white overflow-visible"><div class="tobi_place">T</div><div class="tobi_place">O</div>
-      <div class="tobi_place " id="sit1">B</div><div class="tobi_place">i</div></div>
-      <div style="line-height: 1; color:transparent" class="righteous-regular flex absolute hero_text_animation top-0 "><div class="">T</div><div class="">O</div><div class="">B</div><div class="">i</div></div>
+    <div class="overflow-visible">
+      <div class="text-[9rem] md:text-[15rem] text-shadow_ items-center overflow-visible">
+        <div style="line-height: 1;" class="pacifico-regular text-red-600 text-[5rem]" id="sit1">
+          <SectionTitle texts="DEV-." />
+        </div>
+        <Testcomp />
+        <div class="relative overflow-visible">
+          <div style="line-height: 1;" class="righteous-regular flex text-white overflow-visible">
+            <div class="tobi_place">T</div>
+            <div class="tobi_place">O</div>
+            <div class="tobi_place" id="sit1">B</div>
+            <div class="tobi_place">i</div>
+          </div>
+          <div
+            id="top-banner"
+            style="line-height: 1; color:transparent"
+            class="righteous-regular flex absolute hero_text_animation top-0"
+          >
+            <div class="">T</div>
+            <div class="">O</div>
+            <div class="">B</div>
+            <div class="">i</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute bottom-[-10px] right-1 text-2xl">
+        <p class="text-red-600 pacifico-regular">Portfolio</p>
+      </div>
     </div>
-  </div>
-  
-  <div class="absolute bottom-[-10px] right-1 text-2xl ">
-    <p class="text-red-600 pacifico-regular">Portfolio</p>
-  </div>
-   </div>
   </div>
 
   <div class="play-regular absolute font-semibold top-[86px] left-[150px]">
@@ -72,9 +82,12 @@
     <span class="text-red-600">290</span>
   </div>
 
-  <div id='carousel-fog' class=" absolute md:left-[100px]  left-0 w-[500px] bottom-[100px] p-1 rounded-lg uppercase play-bold ">
-    <div class="relative w-fit overflow-visible ">
-    <FloatLogos/>
+  <div
+    id="carousel-fog"
+    class=" absolute md:left-[100px] left-0 w-[500px] bottom-[100px] p-1 rounded-lg uppercase play-bold overflow-hidden"
+  >
+    <div class="relative w-fit overflow-visible">
+      <FloatLogos from="left" speed="40s" />
     </div>
   </div>
 </section>
@@ -102,18 +115,33 @@
     width: 20%;
     top: 0;
     left: 0;
-}
+  }
 
-#carousel-fog::before {
-    z-index: 30;
-    content: '';
-    display: block;
-    position: absolute;
-    background: linear-gradient(270deg, white, #ffffffe8, transparent);
-    height: 100%;
-    width: 20%;
-    top: 0;
-    right: 0;
-    transition: 1s ease-in-out;
-}
+  #top-banner {
+    overflow: visible !important;
+  }
+
+  #top-banner > div {
+    transition: 150ms;
+    overflow: visible;
+    text-shadow: 4px 4px 0px #000000;
+    color: white;
+    -webkit-text-stroke: 2px #ea5656;
+    background-clip: text;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  #top-banner > div:hover {
+    overflow: visible !important;
+    text-shadow:
+      -20px -20px 0px #dc2626,
+      0px 0px 0px #ffffff,
+      14px 20px 0px #000 !important;
+    transform: scale(1.05);
+    color: transparent;
+    transition: 250ms;
+    -webkit-text-stroke: 2px #dc2626;
+    animation: shake 200ms ease-out forwards;
+  }
 </style>

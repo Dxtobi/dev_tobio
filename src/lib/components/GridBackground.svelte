@@ -1,7 +1,7 @@
 <script>
-  import { onMount } from 'svelte';
+
 	import { createGrid } from './../ui-js/grids.js';
-    onMount(()=>{
+    $effect(()=>{
         createGrid()
     })
 </script>
