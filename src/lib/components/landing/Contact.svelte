@@ -1,8 +1,10 @@
 <script>
   import SectionTitle from "./SectionTitle.svelte";
 
+  let loading = false;
   function sendMail(e) {
     e.preventDefault();
+    loading = true;
   }
 </script>
 
@@ -28,24 +30,42 @@
       <div class=" flex justify-center w-full md:w-[60%] min-h-[50vh]">
         <form class="form-div w-full text-[2.3rem]" on:submit={sendMail}>
           <span>My name is</span>
-          <input placeholder="your full name" class=" border-b contact-input" />
+          <input
+            placeholder="your name"
+            class=" border-b contact-input"
+            required
+            type="text"
+          />
           <span>and I have </span>
           <input
             placeholder="project, job offer, gig etc"
             class=" border-b contact-input"
+            required
+            type="text"
           />
           <span>You can reach me at</span>
           <input
             placeholder="your-email@email.com"
-            class=" border-b contact-input"
+            class=" border-b contact-input w-full"
+            required
+            type="email"
           />
           <span>To get things started.</span>
 
-          <br />
-          <button
-            class="text-2xl rounded-full py-1 px-4 bg-[#e94242e6] text-white shake"
-            >Send info &rang;</button
-          >
+          <br /> <br />
+          {#if loading}
+            <div class="text-2xl rounded-full py-1 text-white shake px-6 w-fit">
+              <div
+                class="w-10 h-10 border-4 border-t-red-100 border-red-600 rounded-full animate-spin"
+              ></div>
+            </div>
+          {:else}
+            <button
+              class="text-2xl rounded-full py-1 bg-[#e94242e6] text-white shake px-6"
+            >
+              Send
+            </button>
+          {/if}
         </form>
       </div>
     </div>

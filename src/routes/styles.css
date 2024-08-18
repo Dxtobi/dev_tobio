@@ -71,7 +71,7 @@ div {
 	width: 100%;
 	left: 0;
 	top: 0;
-	backdrop-filter: blur(10px);
+	/* backdrop-filter: blur(10px); */
 	z-index: 5;
 }
 

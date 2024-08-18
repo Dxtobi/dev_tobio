@@ -7,7 +7,7 @@
   import Projects from "../lib/components/landing/Projects.svelte";
 </script>
 
-<section class="main">
+<section class="main" id="main-comp">
   <Hero />
   <Projects />
   <EXample />

@@ -11,11 +11,7 @@
       testimony:
         "Working with Joseph has been a pleasure. His clean code skills make collaboration a breeze. He's always willing to go the extra mile to ensure our projects are not only functional but also visually stunning.",
     },
-    {
-      name: "Michael ",
-      testimony:
-        "We were fortunate to find Alex. He was able to take our outdated website and transform it into a modern, responsive platform that reflects our brand perfectly. His ability to translate our vision into reality has been invaluable.",
-    },
+
     {
       name: "Emily Garcia, UI/UX Designer",
       testimony:
@@ -31,10 +27,10 @@
   <div class="w-full">
     <div class="my-5 text-start text-[4rem] w-full">
       <div class="text-red-600 righteous-regular" id="sit4">
-        <SectionTitle texts="TESTIMONIALS?." />
+        <SectionTitle texts="REVIEW" />
       </div>
     </div>
-    <div class="grid md:grid-cols-2 gap-4">
+    <div class="grid md:grid-cols-3 gap-4">
       {#each testimonials as _}
         <div class="bg-white p-6 rounded-lg shadow-md border">
           <div class="space-y-4">

@@ -5,6 +5,8 @@
   import SectionTitle from "./SectionTitle.svelte";
   const projectTypes = [
     {
+      bg: "bg-[#e7e399]",
+      text: "#000e",
       pro: "backend",
       num: 8,
       context: "This includes personal projects on production",
@@ -37,6 +39,8 @@
       ],
     },
     {
+      bg: "#ee7",
+      text: "#ffff",
       pro: "frontend",
       num: 20,
       context: "Dose not includes clients projects",
@@ -72,6 +76,8 @@
       ],
     },
     {
+      bg: "#7e7",
+      text: "#ffff",
       pro: "on production",
       num: 5,
       context: "This are personal projects on production",
@@ -98,12 +104,6 @@
           details: "An Ai powered tool to summarize website content",
         },
         {
-          url: "https://sneakybite.vercel.app/",
-          name: "Mobile Demo SneakyBite",
-          details:
-            "A demo app for a mobile food delivery app this demo of the website is for mobile only.",
-        },
-        {
           url: "https://twiwi.vercel.app/",
           name: "twiwi",
           details:
@@ -112,6 +112,8 @@
       ],
     },
     {
+      bg: "#e7e7",
+      text: "#ffff",
       pro: "graphic designs",
       num: 50,
       context: "This includes personal designs",
