@@ -62,8 +62,7 @@
           {#if change_bg_active == texts_displayed.active}{#key texts_displayed.active}
               <div
                 class=" w-fit h-full flex flex-col gap-10 overflow-visible items-center"
-                in:fly={{ x: 0, y: -400 }}
-                out:fly={{ x: 0, y: -400 }}
+                in:fly={{ x: 0, y: -400, duration: 1000 }}
               >
                 <h2
                   class="font-bold md:text-[5rem] text-3xl capitalize"
@@ -107,7 +106,7 @@
               on:blur={() => {
                 changed = 10;
               }}
-              class={` h-[300px] w-[200px]  grid place-content-center`}
+              class={` md:h-[300px] md:w-[200px] w-fit h-fit  grid place-content-center`}
             >
               <div
                 class={`${changed === i ? " -translate-y-20 " : "translate-y-0"} transition-all  h-auto grid justify-between rounded-sm overflow-visible`}

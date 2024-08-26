@@ -108,8 +108,8 @@
           {#if !hovering}
             <div
               class={"absolute z-0 top-0 left-0 w-full h-full"}
-              in:fly={{ x: 0, y: -500 }}
-              out:fly={{ x: 0, y: -500, duration: 500 }}
+              in:fly={{ x: 0, y: -500, duration: 100 }}
+              out:fly={{ x: 0, y: -500, duration: 500, opacity: 1 }}
             >
               <Mask />
             </div>
