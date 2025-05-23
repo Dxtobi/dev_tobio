@@ -1,87 +1,10 @@
 <script>
+	import Projects from './Projects.svelte';
   import Bgtest from "./Bgtest.svelte";
   import EXample from "./EXample.svelte";
   import ProjectBox from "./ProjectBox.svelte";
   import SectionTitle from "./SectionTitle.svelte";
-  const projectTypes = [
-    {
-      bg: "bg-[#e7e399]",
-      text: "#000e",
-      pro: "backend",
-      num: 8,
-      context: "This includes personal projects on production",
-      projects: [
-        {
-          url: "https://github.com/Dxtobi/nineonx",
-          name: "nineonx",
-          details: "A movie scraping API built with Express js",
-        },
-        {
-          url: "https://github.com/Dxtobi/supperApi",
-          name: "supperApi",
-          details: "Express JS mongoose auth template",
-        },
-        {
-          url: "https://github.com/Dxtobi/e-commerce",
-          name: "E-commerce",
-          details: "An e commerce API built with NESTJS",
-        },
-        {
-          url: "https://github.com/Dxtobi/ecom-nest-api",
-          name: "ecom-nest-api",
-          details: "An e commerce API built with NESTJS",
-        },
-        {
-          url: "https://github.com/Dxtobi/Bee-backend",
-          name: "Bee",
-          details: "A social media backend API with Express js",
-        },
-      ],
-    },
-    {
-      bg: "#ee7",
-      text: "#ffff",
-      pro: "frontend",
-      num: 20,
-      context: "Dose not includes clients projects",
-      projects: [
-        {
-          url: "https://xoxouis.vercel.app/agency",
-          name: "The CREATIVE",
-          details:
-            "An agency focused on SEO, Web Dev/Design and Product branding",
-        },
-        {
-          url: "https://xoxouis.vercel.app/platform",
-          name: "Platformer",
-          details:
-            "A platform pined on broadcasting your products or services on all available media.",
-        },
-        {
-          url: "https://xoxouis.vercel.app/formbuilder",
-          name: "Task Manager",
-          details: "A simple drag and drop task manager.",
-        },
-        {
-          url: "https://xoxouis.vercel.app/drags",
-          name: "Form builder UI",
-          details: "A simple drag and drop form builder.",
-        },
-        {
-          url: "https://xoxouis.vercel.app/",
-          name: "UI test",
-          details:
-            "Were I test My UI Before implementing them on real word project.",
-        },
-      ],
-    },
-    {
-      bg: "#7e7",
-      text: "#ffff",
-      pro: "on production",
-      num: 5,
-      context: "This are personal projects on production",
-      projects: [
+  const project = [
         {
           url: "https://extvweb.vercel.app/",
           name: "extvweb",
@@ -89,9 +12,28 @@
             "A movie download website with over 500+ movies works by scraping data off other websites.",
         },
         {
-          url: "https://xoxodownloader.vercel.app/",
-          name: "xoxodownloader",
-          details: "Youtube video downloader",
+          url: "https://fber.vercel.app/",
+          name: "fber",
+          details: "Drag dnd drop form builder",
+        },
+         {
+          url: "https://xoxouis.vercel.app/agency",
+          name: "The CREATIVE",
+          details:
+            "An agency focused on SEO, Web Dev/Design and Product branding",
+        },
+       
+        {
+          url: "https://xoxouis.vercel.app/formbuilder",
+          name: "Task Manager",
+          details: "A simple drag and drop task manager.",
+        },
+       
+        {
+          url: "https://xoxouis.vercel.app/",
+          name: "UI test",
+          details:
+            "Were I test My UI Before implementing them on real word project.",
         },
         {
           url: "https://airbio.vercel.app/",
@@ -103,54 +45,8 @@
           name: "summerier",
           details: "An Ai powered tool to summarize website content",
         },
-        {
-          url: "https://twiwi.vercel.app/",
-          name: "twiwi",
-          details:
-            "An Ai powered tool to summarize tweets or create images from tweets.",
-        },
-      ],
-    },
-    {
-      bg: "#e7e7",
-      text: "#ffff",
-      pro: "graphic designs",
-      num: 50,
-      context: "This includes personal designs",
-      projects: [
-        {
-          url: "https://github.com/Dxtobi/Bee-backend",
-          name: "Bee",
-          details: "A social media backend API with Express js",
-        },
-        {
-          url: "https://github.com/Dxtobi/Bee-backend",
-          name: "Bee",
-          details: "A social media backend API with Express js",
-        },
-        {
-          url: "https://github.com/Dxtobi/Bee-backend",
-          name: "Bee",
-          details: "A social media backend API with Express js",
-        },
-        {
-          url: "https://github.com/Dxtobi/Bee-backend",
-          name: "Bee",
-          details: "A social media backend API with Express js",
-        },
-        {
-          url: "https://github.com/Dxtobi/Bee-backend",
-          name: "Bee",
-          details: "A social media backend API with Express js",
-        },
-        {
-          url: "https://github.com/Dxtobi/Bee-backend",
-          name: "Bee",
-          details: "A social media backend API with Express js",
-        },
-      ],
-    },
-  ];
+      ]
+  
 </script>
 
 <section
@@ -159,33 +55,26 @@
 >
   <div class="alternative_bg_box-1"></div>
   <div class="bg-2-trans-1"></div>
-
-  <div class="my-5 text-start w-full">
-    <div
-      class="text-red-600 righteous-regular text-[4rem] md:text-[5rem]"
+ <div
+      class="text-red-600 righteous-regular text-[2rem] md:text-[5rem]"
       id="sit2"
     >
       <SectionTitle texts="PR*JECTS." />
     </div>
+  <div class="my-5 text-start w-full">
+   
   </div>
-  <div class=" project-body overflow-visible relative">
-    <!-- <div class="indicator">
-      <span>Scroll</span> <span> &rarr;</span>
-    </div> -->
-    <div class="total-project top-[-5%] md:top-0">
-      <p class="text-red-600 play-bold">TOTAL</p>
-      <h3 class="text-gray-600 play-bold text-[2rem]">50+</h3>
-    </div>
-    <div class="----2 flex justify-center overflow-visible">
-      <!-- carrousel-parent -->
-      <div
-        class=" carrousel-parent grid-cols-2 md:grid-cols-4 justify-center overflow-visible gap-3 my-10 w-full whitespace-nowrap md:mt-[5rem]"
-      >
-        {#each projectTypes as i, o}
-          <ProjectBox project={i} index={o}></ProjectBox>
-        {/each}
+  <div class=" relative">
+    {#each project as pro}
+    <div class="border border-gray-400 p-4 rounded-md mb-4">
+        <a href={pro.url} class=" space-y-2  rounded-md mb-10 p-3 overflow w-full">
+          <h2 class="capitalize font-semibold righteous-regular text-red-500">{pro.name}</h2>
+          <p>{pro.details}</p>
+        </a>
+
+        <a href={pro.url}>Click to View</a>
       </div>
-    </div>
+    {/each}
   </div>
 </section>
 

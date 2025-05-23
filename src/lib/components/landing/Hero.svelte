@@ -25,7 +25,7 @@
       const updatedData = await updatedResponse.json();
       visitCount = updatedData.visit_count;
     } catch (error) {
-      console.error("Error fetching or updating visit count:", error);
+      console.error("Error fetching or updating visit count:", error.message);
     }
   });
   let hovering = false;

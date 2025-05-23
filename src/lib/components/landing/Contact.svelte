@@ -1,11 +1,32 @@
 <script>
+	import { onMount } from 'svelte';
   import SectionTitle from "./SectionTitle.svelte";
 
-  let loading = false;
-  function sendMail(e) {
+  let loading = $state(false);
+  async function sendMail(e) {
     e.preventDefault();
-    loading = true;
+    loading=true
+   
+
+   
   }
+
+  $effect(()=>{
+     if(loading){
+      console.log('calling')
+       setTimeout(() => {
+      loading = false;
+        name=''
+        gmail=''
+        job=''
+      console.log('called')
+
+    }, 3000)
+     }
+  })
+   let name=$state('')
+    let gmail=$state('')
+    let job=$state('')
 </script>
 
 <section
@@ -13,7 +34,7 @@
   class="min-h-screen flex justify-start items-center w-full p-4 md:p-20 my-10 bg-neutral-950 text-neutral-300"
 >
   <div class="w-full">
-    <div class="my-5 text-start text-[4rem] w-full">
+    <div class="my-5 text-start text-[2rem] w-full">
       <div class="text-red-500 righteous-regular" id="sit4">
         <SectionTitle texts="CONT*CT." />
       </div>
@@ -35,6 +56,7 @@
             class=" border-b contact-input"
             required
             type="text"
+            bind:value={name}
           />
           <span>and I have </span>
           <input
@@ -42,6 +64,8 @@
             class=" border-b contact-input"
             required
             type="text"
+            bind:value={job}
+
           />
           <span>You can reach me at</span>
           <input
@@ -49,6 +73,8 @@
             class=" border-b contact-input w-full"
             required
             type="email"
+            bind:value={gmail}
+
           />
           <span>To get things started.</span>
 

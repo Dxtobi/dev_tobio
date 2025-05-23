@@ -12,7 +12,7 @@
   import Header from "./Header.svelte";
   import "./styles.css";
   import "./animations.css";
-
+  import 'iconify-icon'
   onMount(async () => {
     startMouseEffect();
     animate_mouse();

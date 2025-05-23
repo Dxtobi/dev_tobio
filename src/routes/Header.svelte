@@ -1,7 +1,7 @@
 <script>
   import { fly } from "svelte/transition";
   import { onMount } from "svelte";
-
+  import 'iconify-icon'
   let scrolling = true;
   //   onMount(() => {
   //     document.getElementById("main-comp").addEventListener("scrollend", (e) => {
@@ -22,12 +22,13 @@
       <div class="lobster-regular text-[2rem] w-[100px]">Tobi</div>
 
       <div class="flex gap-4 items-center overflow-visible">
-        <button class="">
+        <a href='https://x.com/programmer_dex' class="">
           <iconify-icon icon="line-md:twitter-x"></iconify-icon>
-        </button>
-        <a href="/">
+        </a>
+        <a href="https://github.com/Dxtobi?tab=repositories">
           <iconify-icon icon="mdi:github"></iconify-icon>
         </a>
+        
       </div>
     </nav>
   </header>
