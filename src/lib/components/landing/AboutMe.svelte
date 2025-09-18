@@ -60,17 +60,13 @@
       details:'I bring ideas to life through compelling visuals. With proficiency in Adobe Photoshop and Illustrator, I create stunning graphics, user interface designs, and brand identities that effectively communicate messages and enhance digital products.',
       bigt:'Graphic Design',
     },
-    {
-      img:'/m2.png',
-      details:'',
-      bigt:'',
-    },
+    
    
     
   ]
 </script>
 
-<section id="_me" class="min-h-screen p-4  relative   about_ text-neutral-900">
+<section id="_me" class="min-h-screen p-4  relative   about_ text-neutral-900 hidden md:block">
 
    <div class="relative grid place-content-center h-screen w-full ">
      <div class="h-[80vh]  overflow-hidden  border w-full shadow-2xl " >
@@ -111,6 +107,51 @@
         </div>
       </div>
     <div>
+
+
+  
+
+     
+</section>
+
+<section id="_me" class="min-h-screen p-4  relative   about_mobile text-neutral-900  md:hidden">
+
+  <div class="py-6 px-4">
+    <h2 class="text-3xl font-extrabold text-center mb-4">About</h2>
+
+    <div class="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-4 px-4 pb-6">
+      {#each about as t, i}
+        <article class="snap-center flex-none w-[82vw] md:w-[60vw]   backdrop-blur-md rounded-2xl p-4 shadow-lg relative">
+          <!-- faint oversized background title -->
+          <span class="absolute inset-0 flex items-start justify-center pointer-events-none opacity-10 text-6xl font-black text-red-600" style="line-height:1; top:8px; transform:translateY(-5%);">
+            {t.bigt}
+          </span>
+
+          <div class="relative z-10  gap-4 items-start">
+            <div class="w-36 h-36 rounded-lg overflow-hidden flex-shrink-0 shadow-inner border">
+              <img src={t.img} alt={t.bigt} class="w-full h-full object-cover bg-white" />
+            </div>
+
+            <div class="flex-1">
+              <h3 class="text-xl md:text-2xl font-semibold z-10">{t.bigt || 'Untitled'}</h3>
+              <p class="mt-2 text-sm md:text-base text-neutral-700  z-10">
+                {t.details || 'No details provided.'}
+              </p>
+
+              
+            </div>
+          </div>
+
+          <!-- small footer index -->
+          <div class="absolute right-3 bottom-3 z-10 text-xs text-neutral-500">
+            {i + 1} / {about.length}
+          </div>
+        </article>
+      {/each}
+    </div>
+  </div>
+     
+<div>
 
 
   
