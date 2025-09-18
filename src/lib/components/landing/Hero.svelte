@@ -1,4 +1,5 @@
 <script>
+	import { gsap } from 'gsap';
   import { slide, fly } from "svelte/transition";
   import FloatLogos from "./FloatLogos.svelte";
   import SectionTitle from "./SectionTitle.svelte";
@@ -27,6 +28,11 @@
     } catch (error) {
       console.error("Error fetching or updating visit count:", error.message);
     }
+
+    // gsap.to('#scroll', {
+    //   scrollTrigger: '#scroll', // start the animation when ".box" enters the viewport (once)
+    //   x: -500
+    // });
   });
   let hovering = false;
 </script>
@@ -66,7 +72,7 @@
 </div> -->
 
 <section
-  class=" flex justify-center items-center w-full min-h-screen relative"
+  class=" flex justify-center items-center w-full min-h-screen relative backdrop-blur-md"
   id="hero"
 >
   <button
@@ -74,7 +80,7 @@
     on:click={downloadFile}
     transition:slide={{ duration: 880, axis: "y" }}>Get My CV</button
   >
-  <div class="alternative_bg_box"></div>
+  <!-- <div class="alternative_bg_box"></div> -->
   <div class="bg-2-trans"></div>
   <!-- <GridBackground/> -->
   <div class="relative overflow-visible flex justify-center items-center">
@@ -247,13 +253,17 @@
 
   <div
     id="carousel-fog"
-    class=" absolute md:left-[100px] left-0 w-[1000px] bottom-[100px] p-1 rounded-lg uppercase play-bold overflow-hidden"
+    class=" absolute md:left-0 left-0 w-[100vw] bottom-[100px] p-1 rounded-lg uppercase play-bold overflow-hidden "
   >
-    <div class="relative w-fit overflow-visible">
+    <div class="relative w-fit overflow-visible ">
       <FloatLogos from="left" speed="40s" />
     </div>
   </div>
 </section>
+
+<div class=" fixed bottom-0 top-0 w-full left-0 -z-10">
+  <div class="text-[30vw]  " id="scroll">AKANBI JOSEPH OLUWATOBI PORTFOLIO</div>
+</div>
 
 <!-- <div class='absolute righteous-regular text-[10rem] text-shadow_  opacity-0' id='tobi_'>O</div> -->
 <style>

@@ -13,6 +13,10 @@
   import "./styles.css";
   import "./animations.css";
   import 'iconify-icon'
+     import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
   onMount(async () => {
     startMouseEffect();
     animate_mouse();

@@ -31,7 +31,7 @@
 
 <section
   id="contact"
-  class="min-h-screen flex justify-start items-center w-full p-4 md:p-20 my-10 bg-neutral-950 text-neutral-300"
+  class="min-h-screen flex justify-start items-center w-full p-4 md:p-20 mt-10 bg-neutral-950 text-neutral-300"
 >
   <div class="w-full">
     <div class="my-5 text-start text-[2rem] w-full">

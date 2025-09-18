@@ -1,4 +1,5 @@
 <script>
+	import Hero2 from './../lib/components/landing/Hero2.svelte';
   import AboutMe from "../lib/components/landing/AboutMe.svelte";
   import Blog from "../lib/components/landing/Blog.svelte";
   import Contact from "../lib/components/landing/Contact.svelte";
@@ -8,10 +9,15 @@
 </script>
 
 <section class="main" id="main-comp">
-  <Hero />
+  <Hero2/>
+  <!-- <Hero /> -->
   <Projects />
   <EXample />
-  <AboutMe />
+  
+    <div>
+      <AboutMe />
+    </div>
+
   <Blog />
   <Contact />
 </section>

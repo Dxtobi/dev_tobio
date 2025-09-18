@@ -6,16 +6,22 @@
   import SectionTitle from "./SectionTitle.svelte";
   const project = [
         {
+          url: "https://fber.vercel.app/",
+          name: "fber",
+          details: "Drag dnd drop form builder with inbuilt analytics",
+        },
+         {
+          url: "https://xoxouis.vercel.app/formbuilder",
+          name: "Task Manager",
+          details: "A simple drag and drop task manager.",
+        },
+        {
           url: "https://extvweb.vercel.app/",
           name: "extvweb",
           details:
-            "A movie download website with over 500+ movies works by scraping data off other websites.",
+            "A movie download website with over 500+ movies works by scraping data off other websites. with 1.2k users",
         },
-        {
-          url: "https://fber.vercel.app/",
-          name: "fber",
-          details: "Drag dnd drop form builder",
-        },
+       
          {
           url: "https://xoxouis.vercel.app/agency",
           name: "The CREATIVE",
@@ -23,11 +29,7 @@
             "An agency focused on SEO, Web Dev/Design and Product branding",
         },
        
-        {
-          url: "https://xoxouis.vercel.app/formbuilder",
-          name: "Task Manager",
-          details: "A simple drag and drop task manager.",
-        },
+       
        
         {
           url: "https://xoxouis.vercel.app/",
@@ -40,23 +42,19 @@
           name: "airbio",
           details: "An ai powered resume maker",
         },
-        {
-          url: "https://sumerizer.vercel.app",
-          name: "summerier",
-          details: "An Ai powered tool to summarize website content",
-        },
+        
       ]
   
 </script>
 
 <section
-  class="min-h-screen p-4 py-16 md:p-20 flex flex-col items-center relative w-screen justify-center"
+  class="min-h-screen p-4 py-16 md:p-20 flex flex-col items-center relative w-screen justify-center bg-white "
   id="projects"
 >
   <div class="alternative_bg_box-1"></div>
   <div class="bg-2-trans-1"></div>
  <div
-      class="text-red-600 righteous-regular text-[2rem] md:text-[5rem]"
+      class="text-red-600 righteous-regular text-[2rem] md:text-[5rem] "
       id="sit2"
     >
       <SectionTitle texts="PR*JECTS." />
@@ -64,17 +62,20 @@
   <div class="my-5 text-start w-full">
    
   </div>
-  <div class=" relative">
+  <div class=" relative flex flex-col ">
     {#each project as pro}
-    <div class="border border-gray-400 p-4 rounded-md mb-4">
-        <a href={pro.url} class=" space-y-2  rounded-md mb-10 p-3 overflow w-full">
-          <h2 class="capitalize font-semibold righteous-regular text-red-500">{pro.name}</h2>
+    <a href={pro.url} class="border border-gray-400 p-4 rounded-md mb-4 hover:bg-red-600 transition-all hover:text-white hover:border-none">
+        <div class=" space-y-2  rounded-md mb-10 p-3 overflow w-full">
+          <h2 class="capitalize font-semibold righteous-regular  text-3xl ">{pro.name}</h2>
           <p>{pro.details}</p>
-        </a>
+        </div>
 
-        <a href={pro.url}>Click to View</a>
-      </div>
+        
+      </a>
     {/each}
+  </div>
+  <div>
+ 
   </div>
 </section>
 

@@ -2,12 +2,12 @@
   import SectionTitle from "./SectionTitle.svelte";
   let testimonials = [
     {
-      name: "Sarah Lee, Marketing Manager",
+      name: "Sarah, Marketing Manager",
       testimony:
         "Joseph is an exceptional front-end developer who consistently delivers beautiful and user-friendly interfaces. He has a keen eye for detail and a deep understanding of user experience, which has been instrumental in boosting our website's conversion rates.",
     },
     {
-      name: "David Kim, Back-End Developer",
+      name: "David Joshua, Back-End Developer",
       testimony:
         "Working with Joseph has been a pleasure. His clean code skills make collaboration a breeze. He's always willing to go the extra mile to ensure our projects are not only functional but also visually stunning.",
     },
