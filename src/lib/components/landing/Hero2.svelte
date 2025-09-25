@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<section class="w-full min-h-[110vh] bg-white">
+<section class="w-full min-h-[110vh] bg-white"   id="hero">
 
     <div class= "w-full h-[60vh]    flex items-center justify-center relative">
         <div class=" w-full text-[#e44545] text-[25vw] md:text-[20vw] play-bold absolute bottom-0 left-0 right-0 m-auto  ">

@@ -48,7 +48,7 @@
 </script>
 
 <section
-  class="min-h-screen p-4 py-16 md:p-20 flex flex-col items-center relative w-screen justify-center bg-white "
+  class="min-h-screen p-4 py-16 md:p-20 flex flex-col items-center relative w-screen justify-center bg-white overflow-y-hidden"
   id="projects"
 >
   <div class="alternative_bg_box-1"></div>

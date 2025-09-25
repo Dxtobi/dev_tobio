@@ -60,10 +60,8 @@
       details:'I bring ideas to life through compelling visuals. With proficiency in Adobe Photoshop and Illustrator, I create stunning graphics, user interface designs, and brand identities that effectively communicate messages and enhance digital products.',
       bigt:'Graphic Design',
     },
-    
-   
-    
   ]
+
 </script>
 
 <section id="_me" class="min-h-screen p-4  relative   about_ text-neutral-900 hidden md:block">
